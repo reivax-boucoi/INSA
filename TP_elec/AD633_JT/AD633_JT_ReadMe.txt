@@ -1,1 +1,0 @@
-Open symbol (.ASY file) with text editor and adjust MODELFILE path and name to fit where you locate models. 
