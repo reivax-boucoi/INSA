@@ -1,0 +1,15 @@
+go athena simflags="-P 1"
+
+line x loc=0 spac=0.5
+
+line x loc=10 spac=0.15
+line x loc=20 spac=0.3
+line x loc=30 spac=1
+
+line y loc=0 spac=0.05
+line y loc=10 spac=0.1
+line y loc=200 spac=1
+init silicon c.phosphor=1e16 orientation=100 two.d
+
+
+struct outfile=mesh.str
