@@ -15,10 +15,14 @@ int writeFile(FILE* rFile, char* wFileName, int nb){
     return 0;
 }
 
-int main(void){
-        FILE* a=fopen("test.txt","r");
-        int r=writeFile(a,"res.txt",30);
+int main(int argc, char** argv){
+        if(argc!=3){
+            printf("PLease enter input and output files names!\n");
+            return -1;
+        }
+        FILE* a=fopen(argv[1],"r");
+        int r=writeFile(a,argv[2],30);
         fclose(a);
-	printf("test : %d\n",r);
+	printf("return value : %d\n",r);
 	return 0;
 }
