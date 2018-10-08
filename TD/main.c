@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 20
+
 int writeFile(FILE* rFile, char* wFileName, int nb){
+
     if(rFile==NULL)return -1;
+
     FILE* wFile=fopen(wFileName,"w");
     char str[MAX];
     int i=0;
@@ -21,8 +24,11 @@ int main(int argc, char** argv){
             return -1;
         }
         FILE* a=fopen(argv[1],"r");
+
         int r=writeFile(a,argv[2],30);
-        fclose(a);
+
 	printf("return value : %d\n",r);
+	if(r!=-1)fclose(a);
+	
 	return 0;
 }
